@@ -1,0 +1,29 @@
+{
+  "name": "namaste-journey",
+  "version": "1.0.0",
+  "description": "This is my Namaste Journey",
+  "keywords": [
+    "Node"
+  ],
+  "homepage": "https://github.com/vishal-gupta5/Namaste-Journey#readme",
+  "bugs": {
+    "url": "https://github.com/vishal-gupta5/Namaste-Journey/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishal-gupta5/Namaste-Journey.git"
+  },
+  "license": "ISC",
+  "author": "Vishal Gupta",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.1.4"
+  }
+}

@@ -1,0 +1,5 @@
+- Create an app
+- Install express dependancies
+- Create a database connection
+- Create a schema and models
+- make and POST API for /signup
