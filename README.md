@@ -2,4 +2,11 @@
 - Install express dependancies
 - Create a database connection
 - Create a schema and models
-- make and POST API for /signup
+- Make and POST API for /signup
+- Add the express.json() middleware to the app.
+- Make a Signup API dynamic to receive data from the end user.
+- API - Get user by emailId
+- API - Feed API - Get / feed - get all the users from the database.
+- API - Get user by id
+- API - Patch Update the user by id.
+- API - Delete User by ID.
