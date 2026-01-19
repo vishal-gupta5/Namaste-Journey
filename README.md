@@ -10,3 +10,8 @@
 - API - Get user by id
 - API - Patch Update the user by id.
 - API - Delete User by ID.
+- Added required, unique, lowercase, min, minLength, trim,
+- Add default
+- Create a custom validation function for gender
+- Improve tha database schema - Put all appropiate validations on tech field in Schema
+- Add timestamps to the userSchema
