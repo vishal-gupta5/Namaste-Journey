@@ -18,3 +18,8 @@
 - Data Sanitizing - Add API level validations on PATCH request & signup POST API
 - Install Validator
 - Use validator function for password and email.
+- Validate the data in signup data.
+- Install bcrypt library
+- Create passwordHash using bcrypt.hash & save the user is encrypted password.
+- Create a login API
+- Compare Password and throw errors if email or password is invalid!
