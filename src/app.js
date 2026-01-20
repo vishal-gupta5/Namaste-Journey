@@ -77,17 +77,36 @@ app.delete("/user", async (req, res) => {
 });
 
 // Update user by findOneAndUpdate
-app.patch("/user", async (req, res) => {
-  const id = req.body._id;
+app.patch("/user/:_id", async (req, res) => {
+  const id = req.params?._id;
   const data = req.body;
-
   try {
+    const ALLOWED_UPDATES = [
+      "photoURL",
+      "about",
+      "gender",
+      "age",
+      "skills",
+    ];
+
+    const IsUpdateAllowed = Object.keys(data).every((k) =>
+      ALLOWED_UPDATES.includes(k),
+    );
+
+    if (!IsUpdateAllowed) {
+      throw new Error("Update not Allowed!");
+    }
+
+    if(data.skills.length > 10) {
+      throw new Error("Skills can't be more than 10!")
+    }
+
     const user = await User.findByIdAndUpdate(id, data, {
       returnDocument: "after",
       runValidators: true,
     });
     if (!user) {
-      res.status(404).send("Fount not found!");
+      res.status(404).send("User not found!");
     } else {
       res.send(user);
     }

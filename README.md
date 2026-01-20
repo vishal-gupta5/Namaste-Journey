@@ -15,3 +15,4 @@
 - Create a custom validation function for gender
 - Improve tha database schema - Put all appropiate validations on tech field in Schema
 - Add timestamps to the userSchema
+- Data Sanitizing - Add API level validations on PATCH request & signup POST API
