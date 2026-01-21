@@ -4,7 +4,7 @@ validateSignUpData = (req) => {
   const { firstName, lastName, emailId, password } = req.body;
 
   if (!firstName || !lastName) {
-    throw new Error("firstName is invalid!");
+    throw new Error("Name is invalid!");
   } else if (firstName.length < 4 || firstName.length > 50) {
     throw new Error("firstName should be 4-50 characters!");
   } else if (!validator.isEmail(emailId)) {
