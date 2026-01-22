@@ -3,10 +3,13 @@ const connectDB = require("./config/database");
 const User = require("./models/User");
 const { validateSignUpData } = require("./utils/validation");
 const bcrypt = require("bcrypt");
+const cookieParser = require("cookie-parser");
+var jwt = require("jsonwebtoken");
 const app = express();
 const PORT = 4000;
 
 app.use(express.json());
+app.use(cookieParser());
 
 // Get User by an ID
 app.get("/user", async (req, res) => {
@@ -84,7 +87,7 @@ app.post("/login", async (req, res) => {
   try {
     const { emailId, password } = req.body;
 
-    const user = await User.findOne({emailId: emailId});
+    const user = await User.findOne({ emailId: emailId });
     if (!user) {
       throw new Error("Email is not present!");
     }
@@ -92,6 +95,14 @@ app.post("/login", async (req, res) => {
     const isPasswordValid = await bcrypt.compare(password, user.password);
 
     if (isPasswordValid) {
+      // Create a JWT token
+      const token = await jwt.sign(
+        { _id: user._id },
+        "vishalguptasirohi243401@$",
+      );
+      // Add the token to the cookie and send the response back to the user
+      res.cookie("token", token);
+
       res.send("Login Successfully!");
     } else {
       throw new Error("Password is not correct!");
@@ -101,10 +112,30 @@ app.post("/login", async (req, res) => {
   }
 });
 
+// profile API
+app.get("/profile", async (req, res) => {
+  try {
+    const { token } = req.cookies;
+    if (!token) {
+      throw new Error("Invalid Token");
+    }
+
+    const decodeMessage = await jwt.verify(token, "vishalguptasirohi243401@$");
+    const { _id } = decodeMessage;
+
+    const user = await User.findById(_id);
+    if (!user) {
+      throw new Error("User doesn't Exist!");
+    }
+    res.send(user);
+  } catch (err) {
+    res.status(400).send(`ERROR: ${err.message}`);
+  }
+});
+
 // Delete user by findOneAndDelete
 app.delete("/user", async (req, res) => {
   const id = req.body._id;
-
   try {
     await User.findOneAndDelete(id);
     res.send("Deleted user successfully!");
