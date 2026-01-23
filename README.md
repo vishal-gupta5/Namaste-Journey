@@ -28,4 +28,9 @@
 - create GET /profile API and check if get the cookie back
 - Install jsonwebtoken
 - Inside the login API, After email and password validation, Create JWT token and send it to the user in cookies
-- Read the cookies inside the profile API and find the logged in user
+- Read the cookies inside the profile API and find the logged in 
+- userAuth middleware
+- add the userAuth middleware in profile API and a new sendConnectionReaquest API
+- set the expriring of JWT token and cookie for 1 day
+- Create userSchema method to getJWT()
+- Create userSchema method to comparePassword(password)
