@@ -16,6 +16,7 @@
 - Improve tha database schema - Put all appropiate validations on tech field in Schema
 - Add timestamps to the userSchema
 - Data Sanitizing - Add API level validations on PATCH request & signup POST API
+
 - Install Validator
 - Use validator function for password and email.
 - Validate the data in signup data.
@@ -23,6 +24,7 @@
 - Create passwordHash using bcrypt.hash & save the user is encrypted password.
 - Create a login API
 - Compare Password and throw errors if email or password is invalid!
+
 - Install cookie-parser
 - just send dummy cookie to user
 - create GET /profile API and check if get the cookie back
@@ -34,4 +36,10 @@
 - set the expriring of JWT token and cookie for 1 day
 - Create userSchema method to getJWT()
 - Create userSchema method to comparePassword(password)
+
 - Explore Tinder API
+- Create a list of all APIs you can think of in Dev Tinder
+- Group multiple routers under respective routers
+- Creates routes folder for managing, auth, profile, request Routers
+- Create authRouter, profileRouter and requestRouter
+- Import these routers in app.js
