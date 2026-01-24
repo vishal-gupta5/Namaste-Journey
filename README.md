@@ -43,3 +43,6 @@
 - Creates routes folder for managing, auth, profile, request Routers
 - Create authRouter, profileRouter and requestRouter
 - Import these routers in app.js
+- Create POST /logout API
+- Create PATCH / profile/edit API
+- Make you validate all data in the POST, PATCH APIs
