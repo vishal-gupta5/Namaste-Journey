@@ -34,3 +34,4 @@
 - set the expriring of JWT token and cookie for 1 day
 - Create userSchema method to getJWT()
 - Create userSchema method to comparePassword(password)
+- Explore Tinder API
