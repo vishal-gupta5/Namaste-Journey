@@ -30,7 +30,7 @@ requestRouter.post(
         });
       }
 
-      // Check for existing connection request (both directions)
+      // Check for existing connection request
       const existingConnectionRequest = await ConnectionRequest.findOne({
         $or: [
           { fromUserId, toUserId },
