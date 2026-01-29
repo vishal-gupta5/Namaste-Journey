@@ -47,6 +47,10 @@
 - Create POST /logout API
 - Create PATCH / profile/edit API
 - Make you validate all data in the POST, PATCH APIs
-
-
+- Create a connectionRequest Schema
+- Send connetionRequest API
+- Proper validation of data
+- Think about all corner cases.
+- $or query $and query in mongoose.
+- schema.pre("save") function
 - Make the middleware for /request/send/:status/:toUserId route
