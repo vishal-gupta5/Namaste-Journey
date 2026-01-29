@@ -54,3 +54,4 @@
 - $or query $and query in mongoose.
 - schema.pre("save") function
 - Make the middleware for /request/send/:status/:toUserId route
+- Write a proper code with proper validation /request/review/:status/:requestId

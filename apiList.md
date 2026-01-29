@@ -13,8 +13,15 @@
 
 
 ## connectionRequestRouter
+- POST /request/send/:status/:userID
+
 - POST /request/send/interested/:userID
 - POST /request/send/ingnored/:userID
+
+
+
+- POST /request/review/:status/:requestId
+
 - POST /request/review/accepeted/:requestId
 - POST /request/review/rejected/:requestId
 
