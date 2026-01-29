@@ -23,11 +23,10 @@ const connectionRequestSchema = new mongoose.Schema(
 );
 
 // Prevent sending request to self
-connectionRequestSchema.pre("save", function (next) {
+connectionRequestSchema.pre("save", function () {
   if (this.fromUserId.equals(this.toUserId)) {
-    return next(new Error("Can't send a connection request to yourself!"));
+    throw new Error("Can't send a connection request to yourself!");
   }
-  next();
 });
 
 const connectionRequestModel = new mongoose.model(
