@@ -55,3 +55,6 @@
 - schema.pre("save") function
 - Make the middleware for /request/send/:status/:toUserId route
 - Write a proper code with proper validation /request/review/:status/:requestId
+- Use about ref and populate
+- Create GET /user/requests/received
+- Create GET /user/connections
