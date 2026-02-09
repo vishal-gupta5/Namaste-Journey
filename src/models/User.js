@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema(
   {
     firstName: {
       type: String,
-      require: true,
+      required: true,
       minLength: 4,
       maxLength: 50,
     },
@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema(
     emailId: {
       type: String,
       lowercase: true,
-      require: true,
+      required: true,
       unique: true,
       trim: true,
       validate(value) {

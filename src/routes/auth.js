@@ -32,6 +32,7 @@ authRouter.post("/signup", async (req, res) => {
 // login API
 authRouter.post("/login", async (req, res) => {
   try {
+    console.log(req.body)
     const { emailId, password } = req.body;
 
     const user = await User.findOne({ emailId: emailId });
@@ -45,10 +46,13 @@ authRouter.post("/login", async (req, res) => {
       const token = await user.getJWT();
 
       res.cookie("token", token, {
-        expires: new Date(Date.now() + 1 * 3600000),
+        httpOnly: true,
+        secure: false, // true only in HTTPS
+        sameSite: "none", // or "none" with secure:true
+        maxAge: 60 * 60 * 1000, // 1 hour
       });
 
-      res.send("Login Successfully!");
+      res.send(user);
     } else {
       throw new Error("Password is not correct!");
     }
