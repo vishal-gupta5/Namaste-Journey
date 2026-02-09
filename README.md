@@ -58,3 +58,4 @@
 - Use about ref and populate
 - Create GET /user/requests/received
 - Create GET /user/connections
+- Fix token and cookies issue
