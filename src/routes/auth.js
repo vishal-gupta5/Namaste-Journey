@@ -48,7 +48,7 @@ authRouter.post("/login", async (req, res) => {
         httpOnly: true,
         secure: false, // true only in HTTPS
         sameSite: "none", // or "none" with secure:true
-        maxAge: 60 * 60 * 1000, // 1 hour
+        maxAge: 24 * 60 * 60 * 1000, // 1 hour
       });
 
       res.send(user);
