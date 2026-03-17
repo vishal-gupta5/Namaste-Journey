@@ -1,3 +1,5 @@
+# Backend
+
 - Create an app
 - Install express dependancies
 - Create a database connection
@@ -59,3 +61,9 @@
 - Create GET /user/requests/received
 - Create GET /user/connections
 - Fix token and cookies issue
+
+
+
+    # Deployement
+
+    - 
