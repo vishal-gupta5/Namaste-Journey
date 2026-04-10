@@ -1,7 +1,7 @@
 # Backend
 
 - Create an app
-- Install express dependancies
+- Install express dependancies  
 - Create a database connection
 - Create a schema and models
 - Make and POST API for /signup
