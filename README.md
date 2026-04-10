@@ -5,7 +5,7 @@
 - Create a database connection
 - Create a schema and models
 - Make and POST API for /signup
-- Add the express.json() middleware to the app.
+- Add the express.json() middleware to the app.  
 - Make a Signup API dynamic to receive data from the end user.
 - API - Get user by emailId
 - API - Feed API - Get / feed - get all the users from the database.
