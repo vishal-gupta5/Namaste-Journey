@@ -19,7 +19,7 @@
 - Improve tha database schema - Put all appropiate validations on tech field in Schema
 - Add timestamps to the userSchema
 - Data Sanitizing - Add API level validations on PATCH request & signup POST API
-
+ 
 - Install Validator
 - Use validator function for password and email.
 - Validate the data in signup data.
